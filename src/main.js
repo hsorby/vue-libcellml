@@ -1,8 +1,23 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import libCellMLModule from 'libcellml.js'
+import libCellMLWasm from 'libcellml.js/libcellml.wasm'
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+Vue.config.productionTip = false
+Vue.prototype.$libcellml = null
+
+const init = async () => {
+  Vue.prototype.$libcellml = await new libCellMLModule({locateFile(path, prefix) {
+    if(path.endsWith('.wasm')) {
+      return libCellMLWasm
+    }
+    return prefix + path
+  }});
+  /* eslint-disable no-new */
+  new Vue({
+    render: h => h(App),
+  }).$mount('#app');
+};
+ 
+init();
