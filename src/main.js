@@ -9,7 +9,7 @@ Vue.prototype.$libcellml = null
 
 const init = async () => {
   Vue.prototype.$libcellml = await new libCellMLModule({locateFile(path, prefix) {
-    if(path.endsWith('.wasm')) {
+    if(path === 'libcellml.wasm') {
       return libCellMLWasm
     }
     return prefix + path
