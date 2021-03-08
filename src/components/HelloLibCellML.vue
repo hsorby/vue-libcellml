@@ -1,24 +1,22 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      libCellML version: {{ versionMsg }}
-    </p>
+    <p>libCellML version: {{ versionMsg }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloLibCellML",
   props: {
-    msg: String
+    msg: String,
   },
   data: function() {
     return {
-      versionMsg: this.$libcellml.versionString()
-    }
-  }
-}
+      versionMsg: this.$libcellml.versionString(),
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
