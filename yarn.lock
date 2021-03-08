@@ -5074,8 +5074,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-libcellml.js@../build-libcellml-release/src/bindings/javascript/:
-  version "0.2.0"
+libcellml.js@^0.3.0-rc.171:
+  version "0.3.0-rc.171"
+  resolved "https://registry.yarnpkg.com/libcellml.js/-/libcellml.js-0.3.0-rc.171.tgz#c8984a2ea08185f6987ebea48727f8e7e3deb9e6"
+  integrity sha512-dh7B7QkiqiUNo7d0DusyOEySHP76sX7MQay4gHoywZ1c81eJL3gcv1atCh+yoXRLJ3JMKNBlGbpmcr8K0PkA1Q==
 
 lines-and-columns@^1.1.6:
   version "1.1.6"

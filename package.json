@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "libcellml.js": "../build-libcellml-release/src/bindings/javascript/",
+    "libcellml.js": "^0.3.0-rc.171",
     "vue": "^2.6.11"
   },
   "devDependencies": {
